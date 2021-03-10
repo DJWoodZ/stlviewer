@@ -1,0 +1,23 @@
+{
+  "name": "stlviewer",
+  "version": "1.0.0",
+  "description": "",
+  "browser": "./src/stlviewer/StlViewer.js",
+  "keywords": [],
+  "author": "DJWoodZ",
+  "license": "MIT",
+  "scripts": {
+    "clean": "rm -rf dist/",
+    "start": "parcel src/index.html",
+    "build-prod": "npm run clean && parcel build ./src/stlviewer/StlViewer.js --global StlViewer --public-url ."
+  },
+  "dependencies": {
+    "three": "^0.126.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.13.8",
+    "@babel/preset-env": "7.13.8",
+    "eslint": "^7.21.0",
+    "parcel-bundler": "^1.12.4"
+  }
+}
