@@ -8,8 +8,9 @@
   "license": "MIT",
   "scripts": {
     "clean": "rm -rf dist/",
+    "lint": "./node_modules/.bin/eslint \"src/**/*.js\"",
     "start": "parcel src/index.html",
-    "build-prod": "npm run clean && parcel build ./src/stlviewer/StlViewer.js --global StlViewer --public-url ."
+    "build-prod": "npm run clean && npm run lint && parcel build ./src/stlviewer/StlViewer.js --global StlViewer --public-url ."
   },
   "dependencies": {
     "three": "^0.126.1"
